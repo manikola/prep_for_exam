@@ -1,0 +1,8 @@
+
+n	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(λτ™;
+K
+java:S1172%".Remove this unused method parameter "endTime".(α™¤θ8΄πώ.
+<
+java:S1640:"Convert this Map to an EnumMap.(Εφ—8πιώ.
+Q
+java:S1128"/Remove this unused import 'java.time.Duration'.(λα―‰όÿÿÿÿ8΄πώ.

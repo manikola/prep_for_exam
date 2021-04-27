@@ -1,0 +1,48 @@
+
+O
+java:S1199!"-Extract this nested code block into a method.(·ÿ½äûÿÿÿÿ8™Èòˆ€/
+O
+java:S1199&"-Extract this nested code block into a method.(ğÁ–Óûÿÿÿÿ8™Èòˆ€/
+O
+java:S1199+"-Extract this nested code block into a method.(úÀôãùÿÿÿÿ8™Èòˆ€/
+J
+java:S1199/"-Extract this nested code block into a method.(ÎŞèº8™Èòˆ€/
+J
+java:S11993"-Extract this nested code block into a method.(Ó‚ï8™Èòˆ€/
+J
+java:S11997"-Extract this nested code block into a method.(îÒ«Â8™Èòˆ€/
+J
+java:S1199;"-Extract this nested code block into a method.(ô‹Êâ8™Èòˆ€/
+O
+java:S1199?"-Extract this nested code block into a method.(Î—­Šşÿÿÿÿ8™Èòˆ€/
+O
+java:S1128"2Remove this unused import 'java.sql.SQLException'.(ÛïÆŸ8™Èòˆ€/
+Q
+java:S1128"/Remove this unused import 'java.sql.SQLOutput'.(ê¤òÃùÿÿÿÿ8™Èòˆ€/
+W
+java:S1128"5Remove this unused import 'org.flywaydb.core.Flyway'.(øŸáãûÿÿÿÿ8™Èòˆ€/
+a
+java:S1128"?Remove this unused import 'org.mariadb.jdbc.MariaDbDataSource'.(‰ã¯ıÿÿÿÿ8™Èòˆ€/
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ô–èñøÿÿÿÿ8™Èòˆ€/
+T	java:S106""9Replace this use of System.out or System.err by a logger.(çˆÇJ8™Èòˆ€/
+Z	java:S106'"9Replace this use of System.out or System.err by a logger.(òåääúÿÿÿÿ8™Èòˆ€/
+Z	java:S106,"9Replace this use of System.out or System.err by a logger.(ä«Õ…ùÿÿÿÿ8™Èòˆ€/
+U	java:S1060"9Replace this use of System.out or System.err by a logger.(÷”½å8™Èòˆ€/
+Z	java:S1064"9Replace this use of System.out or System.err by a logger.(•şà¶üÿÿÿÿ8™Èòˆ€/
+Z	java:S1068"9Replace this use of System.out or System.err by a logger.(™¤ØÌüÿÿÿÿ8™Èòˆ€/
+Z	java:S106@"9Replace this use of System.out or System.err by a logger.(¥¶“–úÿÿÿÿ8™Èòˆ€/
+Z	java:S106G"9Replace this use of System.out or System.err by a logger.(‹Š¨Çüÿÿÿÿ8™Èòˆ€/
+Z	java:S106S"9Replace this use of System.out or System.err by a logger.(¨øëÇıÿÿÿÿ8™Èòˆ€/
+]
+java:S1117Z";Rename "scanner" which hides the field declared at line 12.(ù ƒ‘üÿÿÿÿ8™Èòˆ€/
+Z	java:S106^"9Replace this use of System.out or System.err by a logger.(°ç½Ñúÿÿÿÿ8™Èòˆ€/
+U	java:S106c"9Replace this use of System.out or System.err by a logger.(Ê÷£8™Èòˆ€/
+Z	java:S106e"9Replace this use of System.out or System.err by a logger.(ı™øøÿÿÿÿ8™Èòˆ€/
+U	java:S106k"9Replace this use of System.out or System.err by a logger.(¾±”û8™Èòˆ€/
+U	java:S106u"9Replace this use of System.out or System.err by a logger.(ã›¿Í8™Èòˆ€/
+U	java:S106"9Replace this use of System.out or System.err by a logger.(ÀÓÅ„8™Èòˆ€/
+[	java:S106‰"9Replace this use of System.out or System.err by a logger.(¹¢Èˆşÿÿÿÿ8™Èòˆ€/
+V	java:S106•"9Replace this use of System.out or System.err by a logger.(ñÙœå8™Èòˆ€/
+V	java:S106š"9Replace this use of System.out or System.err by a logger.(àëší8™Èòˆ€/
+[	java:S106 "9Replace this use of System.out or System.err by a logger.(°Øı²ÿÿÿÿÿ8™Èòˆ€/
+V	java:S106©"9Replace this use of System.out or System.err by a logger.(î·Åê8™Èòˆ€/

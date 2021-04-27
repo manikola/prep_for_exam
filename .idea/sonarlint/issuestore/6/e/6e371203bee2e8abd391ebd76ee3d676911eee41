@@ -1,0 +1,9 @@
+
+I
+java:S1068
+"'Remove this unused "lon" private field.(Ïı¥æÿÿÿÿÿ8Û‡ƒ¹/
+H
+java:S1068"&Remove this unused "id" private field.(°µ€˜ıÿÿÿÿ8ëÀ¹/
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(•ã²ß
+I
+java:S1068	"'Remove this unused "lat" private field.(û‰º­ûÿÿÿÿ8Û‡ƒ¹/

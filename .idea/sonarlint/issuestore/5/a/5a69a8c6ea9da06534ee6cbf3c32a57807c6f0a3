@@ -1,0 +1,8 @@
+
+€
+java:S1488"^Immediately return this expression instead of assigning it to the temporary variable "result".(±ˆÑ—ùÿÿÿÿ8‚Ëçˆ€/
+^	java:S125€"<This block of commented-out lines of code should be removed.(òéòŽÿÿÿÿÿ8‚Ëçˆ€/
+N
+java:S1481S",Remove this unused "columns" local variable.(ž®Òóùÿÿÿÿ8‚Ëçˆ€/
+a
+java:S1144y"?Remove this unused private "executeAndGetGeneratedKeys" method.(Ì³¶ñøÿÿÿÿ8‚Ëçˆ€/

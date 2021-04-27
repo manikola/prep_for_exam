@@ -1,0 +1,7 @@
+kenyér;2;30
+tej;4;30
+joghurt;8;30
+pizza;2;30
+brokkoli;1;30
+alma;2;30
+banán;6;30

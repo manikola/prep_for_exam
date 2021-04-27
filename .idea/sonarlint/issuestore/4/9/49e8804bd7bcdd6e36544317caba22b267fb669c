@@ -1,0 +1,7 @@
+
+F
+java:S1481Y")Remove this unused "item" local variable.(ÃŠ ¬8È²´Ú/
+‡
+java:S1488@"eImmediately return this expression instead of assigning it to the temporary variable "minCoordinate".(•‘°Õûÿÿÿÿ8×ä”Ú/
+‚
+java:S1488R"eImmediately return this expression instead of assigning it to the temporary variable "maxCoordinate".(®Ÿ›ó8ìâ¡Ú/
