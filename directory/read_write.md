@@ -1,21 +1,24 @@
--------------ÍRÁS KIS MÉRET? EGYBEN-------------
+-------------ÍRÁS KIS MÉRET, EGYBEN-------------
 Files.writeString(file, "John Doe\nJane Doe\n"): egy lépésben kiírja a teljes szöveget, létrehoz/felülír
 Files.writeString(file, "John Doe\nJane Doe", StandardOpenOption.APPEND): hozzáfűz
 Files.write(file, list): minden listaelem külön-külön sorba kerül
 
+
 Path file = Path.of("employees.txt");
-try {
+try{
 Files.writeString(file, "John Doe\nJane Doe\n", Charset.forName("ISO-8859-2"));
 }
-catch (IOException ioe) {
+catch(IOException ioe){
 throw new IllegalStateException("Can not write file", ioe);
 }
+
 
 StandardOpenOption.APPEND: az új szöveget a már meglévő tartalom végéhez szeretnénk hozzáfűzni
 
 List<String> employees = List.of("John Doe", "Jane Doe");
-Files.write(file, employees);
-A Files.write() metódusnak is lehet karakterkészletet, illetve OpenOption példányokat átadni paraméterként,ezzel 
+Files.write(file,employees);
+
+A Files.write() metódusnak is lehet karakterkészletet, illetve OpenOption példányokat átadni paraméterként,ezzel
 szövegek listája is kiírható fájlba
 
 ------------ÍRÁS DARABOKBAN? NAGY MÉRET---------------------
@@ -25,13 +28,14 @@ write(): sorvége jelet külön karakterként nekünk kell kiírni. Mivel ez ren
 
 List<String> employees = List.of("John Doe", "Jane Doe", "Jack Doe");
 Path file = Path.of("employees.txt");
-try (BufferedWriter writer = Files.newBufferedWriter(file)) {
-for (String employee: employees) {
-writer.write(employee + "\n");
-}
-}
-catch (IOException ioe) {
-throw new IllegalStateException("Can not write file", ioe);
+
+        try(BufferedWriter writer = Files.newBufferedWriter(file)){
+         for (String employee : employees) {
+            writer.write(employee + "\n");
+        }
+    }
+    catch(IOException ioe){
+    throw new IllegalStateException("Can not write file", ioe);
 }
 
 Régen:
@@ -44,18 +48,18 @@ print(), println() és a printf():  overloadolt, minden primitív típusú, vala
 
 List<String> employees = List.of("John Doe", "Jane Doe", "Jack Doe");
 Path file = Path.of("employees.txt");
-try (PrintWriter writer = new PrintWriter(Files.newBufferedWriter(file))) {
-for (String employee: employees) {
+try(PrintWriter writer = new PrintWriter(Files.newBufferedWriter(file))){
+for (String employee : employees) {
 writer.print(employee);
 writer.print(",");
 writer.println(200_000);
 }
 }
-catch (IOException ioe) {
+catch(IOException ioe){
 throw new IllegalStateException("Can not read file", ioe);
 }
 
---------------------BINÁRIS ÍRÁS? KIS MÉRET EGYBEN---------
+--------------------BINÁRIS ÍRÁS, KIS MÉRET EGYBEN---------
 Files.write(file, new byte[]{97, 98, 99, 100, 101}): bináris állomány írására is, amennyiben második paraméterként byte[] típusú adatot adunk át.
 
 Path file = Path.of("data.dat");
@@ -71,7 +75,7 @@ throw new IllegalStateException("Can not write file", ioe);
 new BufferedOutputStream(Files.newOutputStream(file)): Bináris fájlok írásához
 write() metódussal írhatjuk ki a paraméterként átadott byte[] típusú adatot.
 
-java Path file = Path.of("data.dat");
+Path file = Path.of("data.dat");
 try (OutputStream outputStream = new BufferedOutputStream(Files.newOutputStream(file))) {
 for (int i = 0; i < 1100; i++) {
 outputStream.write("abcde".getBytes());
@@ -80,6 +84,7 @@ outputStream.write("abcde".getBytes());
 catch (IOException ioe) {
 throw new IllegalStateException("Cannot write file", ioe);
 }
+
 
 Régen:
 OutputStream os = new BufferedOutputStream(new FileOutputStream("data.dat"))
@@ -98,7 +103,7 @@ os.putNextEntry(new ZipEntry("data.dat"));
 for (int i = 0; i < 1100; i++) {
 os.write("abcde".getBytes());
 }
-}
+}   
 catch (IOException ioe) {
 throw new IllegalStateException("Can not write file", ioe);
 }
@@ -109,17 +114,17 @@ A PrintStream metódusai bármilyen típusú adat szöveges reprezentációját 
 
 Path file = Path.of("employees.txt");
 List<String> employees = List.of("John Doe", "Jane Doe", "Jack Doe");
-try (PrintStream outputStream = new PrintStream(
-new BufferedOutputStream(Files.newOutputStream(file)))) {
-for (String employee: employees) {
-outputStream.print(employee);
-outputStream.print(",");
-outputStream.println(200_000);
-}
-}
-catch (IOException ioe) {
-throw new IllegalStateException("Can not write file", ioe);
-}
+
+    try (PrintStream outputStream = new PrintStream(new BufferedOutputStream(Files.newOutputStream(file)))) {
+            for (String employee: employees) {
+                outputStream.print(employee);
+                outputStream.print(",");
+                outputStream.println(200_000);
+            }
+    }
+        catch (IOException ioe) {
+                throw new IllegalStateException("Can not write file", ioe);
+        }
 
 -----------------------DATAOUTPUTSTREAM---------------
 Bináris állományba nem csak bájtokat, hanem egyéb primitív típusú adatokat és szöveget is írhatunk DataOutputStream segítségével. A metódusai az adatokat bájtsorozattá alakítják, majd átadják az alatta lévő OutputStream-nek. Minden adattípusnak saját metódusa van, például writeInt(), writeDouble, szöveghez a writeUTF().
@@ -129,8 +134,7 @@ writeInt(), writeDouble, szöveghez a writeUTF()
 
 
 Path file = Path.of("data.dat");
-try (DataOutputStream outputStream = new DataOutputStream(
-new BufferedOutputStream(Files.newOutputStream(file)))) {
+try (DataOutputStream outputStream = new DataOutputStream(new BufferedOutputStream(Files.newOutputStream(file)))) {
 outputStream.writeUTF("John Doe");
 outputStream.writeInt(200_000);
 }
@@ -161,4 +165,5 @@ DataOutputStream: egyéb adatok(int, double, String) konvertálása adatfolyamm�
 OutputStream-et csomagol be.
 bájtok folyamatos kiírására: zip-be írás
 ◦ putNextEntry(): új zipEntry-t rak a fájlbaés onnantól ugyanúgy ír bele, mint egy sima OutputStream
+
 
